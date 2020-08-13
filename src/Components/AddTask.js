@@ -57,11 +57,25 @@ function AddTask() {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && todo.trim()) {
+      dispatch({
+        type: "ADD_TODO",
+        payload: todo,
+      });
+      setTodo("");
+    }
+  };
+
   return (
     <TaskInputContainer>
       <TextEnter>Enter your task</TextEnter>
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <InputTodo value={todo} onChange={(e) => setTodo(e.target.value)} />
+        <InputTodo
+          value={todo}
+          onChange={(e) => setTodo(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
         <ButtonAdd onClick={handleClick}>ADD</ButtonAdd>
       </div>
     </TaskInputContainer>
