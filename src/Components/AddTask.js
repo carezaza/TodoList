@@ -7,18 +7,18 @@ const TaskInputContainer = styled.div`
   flex-direction: column;
 `;
 
-const Input = styled.input`
+const InputTodo = styled.input`
   border: 1px solid #ccc;
   border-bottom: 2px solid #ccc;
-  border-radius: 5px 0 0 0 ;
-  outline:none;
+  border-radius: 5px 0 0 0;
+  outline: none;
   height: 35px;
-  width: 300px;
+  width: 250px;
   padding: 0 5px;
 
   &:focus {
-    border: 1px solid  #33a6df;
-    border-bottom: 2px solid  #33a6df;
+    border: 1px solid #33a6df;
+    border-bottom: 2px solid #33a6df;
   }
 `;
 
@@ -41,6 +41,7 @@ const ButtonAdd = styled.button`
 const TextEnter = styled.p`
   font-weight: 600;
   margin: 10px 0;
+  color: white;
 `;
 
 function AddTask() {
@@ -59,8 +60,8 @@ function AddTask() {
   return (
     <TaskInputContainer>
       <TextEnter>Enter your task</TextEnter>
-      <div>
-        <Input value={todo} onChange={(e) => setTodo(e.target.value)} />
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <InputTodo value={todo} onChange={(e) => setTodo(e.target.value)} />
         <ButtonAdd onClick={handleClick}>ADD</ButtonAdd>
       </div>
     </TaskInputContainer>

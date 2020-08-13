@@ -15,8 +15,6 @@ const TodoReducer = (state = INITIAL_STATE, action) => {
             id: uuidv4(),
             todo: payload,
             completed: false,
-            date: new Date().toLocaleString(),
-            detail: "",
           },
         ],
       };

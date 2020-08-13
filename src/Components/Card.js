@@ -88,11 +88,15 @@ function Card({ item }) {
   };
 
   const handleEdit = () => {
-    if (edit && todo.trim()) {
-      dispatch({
-        type: "EDIT_TODO",
-        payload: { ...item, todo },
-      });
+    if (edit) {
+      if (todo.trim()) {
+        dispatch({
+          type: "EDIT_TODO",
+          payload: { ...item, todo },
+        });
+      } else {
+        setTodo(item.todo);
+      }
     }
     setEdit(!edit);
   };

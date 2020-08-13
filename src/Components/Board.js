@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f3f3f3;
-  border: 1px solid #ccc;
+  background-color: #fafafa;
+  border-radius: 3px;
   width: 100%;
   max-width: 650px;
   height: 500px;
@@ -15,10 +15,10 @@ const Container = styled.div`
 const Header = styled.div`
   text-align: center;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-radius: 3px 3px 0 0;
   background-color: #33a6df;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 `;
 
@@ -32,7 +32,7 @@ const TodoContainer = styled.div`
 function Board({ children, onDrop, name }) {
   return (
     <Container>
-      <Header>TODO</Header>
+      <Header>Just do it.</Header>
       <TodoContainer
         name={name}
         onDrop={onDrop}

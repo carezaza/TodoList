@@ -6,10 +6,11 @@ function App() {
     <div
       style={{
         minHeight: "100vh",
-        padding: "40px 0",  
+        padding: "40px 10px",  
+        background: 'rgba(0,0,0,0.9)'
       }}
     >
-      <h3 align="center">TODO LIST</h3>
+      <h3 align="center" style={{color:'white'}}>TODO LIST</h3>
       <TodoList />
     </div>
   );
