@@ -4,20 +4,22 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #ebecf0;
+  background-color: #f3f3f3;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  width: 400px;
+  width: 100%;
+  max-width: 650px;
   height: 500px;
-  margin: 10px;
+  margin: 20px 0;
 `;
 
 const Header = styled.div`
   text-align: center;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  background-color: lightgreen;
+  background-color: #33a6df;
   font-weight: 600;
+  font-size: 20px;
+  color: white;
 `;
 
 const TodoContainer = styled.div`

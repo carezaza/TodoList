@@ -1,11 +1,16 @@
 import React from "react";
-import Home from "./Containers/Home";
+import TodoList from "./Components/TodoList";
 
 function App() {
   return (
-    <div>
-      <h2 align="center">TODO LIST</h2>
-      <Home />
+    <div
+      style={{
+        minHeight: "100vh",
+        padding: "40px 0",  
+      }}
+    >
+      <h3 align="center">TODO LIST</h3>
+      <TodoList />
     </div>
   );
 }
