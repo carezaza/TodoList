@@ -87,7 +87,7 @@ function Card({ item }) {
     });
   };
 
-  const handleEdit = () => {
+  const EditTodo = () => {
     if (edit) {
       if (todo.trim()) {
         dispatch({
@@ -101,10 +101,23 @@ function Card({ item }) {
     setEdit(!edit);
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      EditTodo();
+    }
+  };
+
+  const handleEdit = () => EditTodo();
+
   return (
     <CardTodo>
       {edit ? (
-        <InputEdit value={todo} onChange={(e) => setTodo(e.target.value)} />
+        <InputEdit
+          ref={(input) => input && input.focus()}
+          value={todo}
+          onKeyPress={handleKeyPress}
+          onChange={(e) => setTodo(e.target.value)}
+        />
       ) : (
         <TodoText completed={item.completed}>{item.todo}</TodoText>
       )}
